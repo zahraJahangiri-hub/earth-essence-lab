@@ -10,7 +10,7 @@ export function HeroSection() {
       style={{ backgroundImage: `url(${heroImage})` }}
     >
       {/* Animated overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/95 animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/92 via-background/85 to-background/92 animate-[pulse_6s_ease-in-out_infinite]" />
       
       {/* Floating particles animation */}
       <div className="absolute inset-0">
