@@ -7,8 +7,8 @@ export function NavHeader() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-primary rounded-md flex items-center justify-center">
-            <Leaf className="w-5 h-5 text-primary-foreground" />
+          <div className="w-8 h-8 bg-gradient-primary rounded-sm flex items-center justify-center transform rotate-12 shadow-glow">
+            <div className="w-4 h-4 bg-primary-foreground rounded-sm transform -rotate-12" />
           </div>
           <span className="text-xl font-bold text-foreground">Carboform</span>
         </div>

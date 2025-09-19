@@ -1,44 +1,39 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function PartnersSection() {
-  const partners = [
-    { name: "GreenTech Innovations", logo: "🌱" },
-    { name: "Sustainable Futures Fund", logo: "♻️" },
-    { name: "BioChemical Alliance", logo: "⚗️" },
-    { name: "Carbon Neutral Initiative", logo: "🌍" },
-    { name: "CleanTech Accelerator", logo: "⚡" },
-    { name: "Circular Economy Foundation", logo: "🔄" }
-  ];
 
   return (
     <section id="partners" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Our <span className="text-primary">Partners</span>
+            Supported <span className="text-primary">By</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Collaborating with leading organizations to accelerate the transition to sustainable industrial processes.
+            Backed by leading research institutions and innovation organizations driving sustainable transformation.
           </p>
         </div>
 
-        {/* Partner logos grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {partners.map((partner, index) => (
-            <div 
-              key={index}
-              className="group flex flex-col items-center justify-center p-6 border border-border rounded-lg hover:border-primary/50 hover:shadow-card transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                {partner.logo}
-              </div>
-              <span className="text-sm text-center text-muted-foreground group-hover:text-primary transition-colors">
-                {partner.name}
-              </span>
+        {/* Supporter logos grid */}
+        <div className="flex justify-center items-center gap-16 mb-16 flex-wrap">
+          <div className="group flex flex-col items-center justify-center p-8 border border-border rounded-lg hover:border-primary/50 hover:shadow-card transition-all duration-300 hover:-translate-y-1 animate-fade-in-up">
+            <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              🏛️
             </div>
-          ))}
+            <span className="text-lg font-semibold text-center text-muted-foreground group-hover:text-primary transition-colors">
+              University of Toronto
+            </span>
+          </div>
+          <div className="group flex flex-col items-center justify-center p-8 border border-border rounded-lg hover:border-primary/50 hover:shadow-card transition-all duration-300 hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              💫
+            </div>
+            <span className="text-lg font-semibold text-center text-muted-foreground group-hover:text-primary transition-colors">
+              Impact Zero
+            </span>
+          </div>
         </div>
 
         {/* Call to action */}
@@ -51,10 +46,12 @@ export function PartnersSection() {
             can help decarbonize your operations while creating new revenue streams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="text-lg px-8">
-              Schedule a Consultation
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to="/consultation">
+              <Button variant="hero" size="lg" className="text-lg px-8">
+                Schedule a Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="text-lg px-8">
               Download Our Whitepaper
             </Button>

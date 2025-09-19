@@ -8,58 +8,58 @@ All colors MUST be HSL for proper theming.
 
 @layer base {
   :root {
-    /* Base backgrounds - Clean whites with subtle green undertones */
-    --background: 120 20% 98%;
-    --foreground: 150 15% 15%;
+    /* Base backgrounds - Dark luxury with deep green undertones */
+    --background: 150 25% 12%;
+    --foreground: 120 15% 90%;
 
     /* Card surfaces */
-    --card: 0 0% 100%;
-    --card-foreground: 150 15% 15%;
+    --card: 150 20% 15%;
+    --card-foreground: 120 15% 90%;
 
     /* Popovers */
-    --popover: 0 0% 100%;
-    --popover-foreground: 150 15% 15%;
+    --popover: 150 20% 15%;
+    --popover-foreground: 120 15% 90%;
 
-    /* Primary - Vibrant emerald green for innovation */
-    --primary: 150 75% 42%;
+    /* Primary - Luxury emerald green */
+    --primary: 150 70% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 150 65% 55%;
+    --primary-glow: 150 65% 60%;
 
-    /* Secondary - Softer green tones */
-    --secondary: 140 35% 94%;
-    --secondary-foreground: 150 15% 15%;
+    /* Secondary - Dark luxury tones */
+    --secondary: 150 15% 20%;
+    --secondary-foreground: 120 15% 90%;
 
     /* Muted tones */
-    --muted: 140 25% 96%;
-    --muted-foreground: 150 10% 45%;
+    --muted: 150 15% 18%;
+    --muted-foreground: 120 12% 65%;
 
-    /* Accent - Fresh green highlight */
-    --accent: 155 60% 50%;
+    /* Accent - Luxury green highlight */
+    --accent: 155 55% 55%;
     --accent-foreground: 0 0% 100%;
 
     /* Earth tone for natural feel */
-    --earth: 35 25% 65%;
-    --earth-foreground: 150 15% 15%;
+    --earth: 35 20% 45%;
+    --earth-foreground: 120 15% 90%;
 
     /* Destructive states */
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders and inputs */
-    --border: 140 25% 88%;
-    --input: 140 25% 88%;
-    --ring: 150 75% 42%;
+    --border: 150 15% 25%;
+    --input: 150 15% 25%;
+    --ring: 150 70% 45%;
 
-    /* Custom gradients for fresh innovation feel */
+    /* Custom gradients for luxury innovation feel */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(155 60% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(150 65% 25%) 0%, hsl(155 55% 35%) 100%);
     --gradient-earth: linear-gradient(45deg, hsl(var(--earth)) 0%, hsl(var(--accent)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(140 35% 96%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(150 20% 18%) 100%);
 
-    /* Shadows with green glow */
-    --shadow-green: 0 10px 40px -12px hsl(var(--primary) / 0.25);
-    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(150 25% 15% / 0.1);
+    /* Enhanced shadows for luxury feel */
+    --shadow-green: 0 15px 50px -15px hsl(var(--primary) / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    --shadow-card: 0 8px 30px -6px hsl(0 0% 0% / 0.3);
 
     /* Animation timing */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
