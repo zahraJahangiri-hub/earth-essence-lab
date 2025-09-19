@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowLeft, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
-
 export default function Consultation() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -14,25 +13,31 @@ export default function Consultation() {
     email: "",
     message: ""
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to a backend
     console.log("Form submitted:", formData);
     toast({
       title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
+      description: "We'll get back to you within 24 hours."
     });
-    setFormData({ firstName: "", lastName: "", email: "", message: "" });
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: ""
+    });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -72,27 +77,13 @@ export default function Consultation() {
                       <label htmlFor="firstName" className="block text-sm font-medium mb-2">
                         First name
                       </label>
-                      <Input
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        required
-                        className="w-full"
-                      />
+                      <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required className="w-full" />
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium mb-2">
                         Last name
                       </label>
-                      <Input
-                        id="lastName"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        required
-                        className="w-full"
-                      />
+                      <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required className="w-full" />
                     </div>
                   </div>
                   
@@ -100,30 +91,14 @@ export default function Consultation() {
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
                       Email *
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full"
-                    />
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="w-full" />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Write a message
                     </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      className="w-full resize-none"
-                      placeholder="Tell us about your project, waste streams, or any specific questions you have..."
-                    />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={5} className="w-full resize-none" placeholder="Tell us about your project, waste streams, or any specific questions you have..." />
                   </div>
 
                   <Button type="submit" variant="hero" size="lg" className="w-full">
@@ -134,7 +109,9 @@ export default function Consultation() {
             </Card>
 
             {/* Contact Information */}
-            <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <div className="space-y-8 animate-fade-in-up" style={{
+            animationDelay: "0.2s"
+          }}>
               <div>
                 <h2 className="text-2xl font-bold mb-6 text-foreground">Contact Information</h2>
                 <div className="space-y-4">
@@ -148,7 +125,7 @@ export default function Consultation() {
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <span className="text-muted-foreground">Toronto, Ontario, Canada</span>
+                    <span className="text-muted-foreground">Hamilton, Ontario, Canada</span>
                   </div>
                 </div>
               </div>
@@ -182,6 +159,5 @@ export default function Consultation() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
