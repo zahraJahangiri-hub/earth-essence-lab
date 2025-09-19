@@ -2,21 +2,24 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Recycle, Leaf, Factory } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
-
 export function HeroSection() {
-  return (
-    <section 
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
+  return <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden" style={{
+    backgroundImage: `url(${heroImage})`
+  }}>
       {/* Animated overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/92 via-background/85 to-background/92 animate-[pulse_6s_ease-in-out_infinite]" />
       
       {/* Floating particles animation */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{ animationDelay: "0s" }} />
-        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-primary-glow/20 rounded-full animate-float" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-accent/40 rounded-full animate-float" style={{ animationDelay: "4s" }} />
+      <div className="absolute inset-0 bg-[#3a433a]/[0.54]">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-float" style={{
+        animationDelay: "0s"
+      }} />
+        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-primary-glow/20 rounded-full animate-float" style={{
+        animationDelay: "2s"
+      }} />
+        <div className="absolute top-1/2 left-3/4 w-1 h-1 bg-accent/40 rounded-full animate-float" style={{
+        animationDelay: "4s"
+      }} />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -29,7 +32,7 @@ export function HeroSection() {
           </h1>
           
           {/* Supporting text */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-zinc-300">
             Carboform is on a mission to decarbonize the hard-to-abate chemicals and fuels sectors 
             through innovative waste transformation technology.
           </p>
@@ -53,20 +56,12 @@ export function HeroSection() {
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/consultation">
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="text-lg px-8 py-4 animate-glow-pulse"
-              >
+              <Button variant="hero" size="lg" className="text-lg px-8 py-4 animate-glow-pulse">
                 Discover Our Technology
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="text-lg px-8 py-4"
-            >
+            <Button variant="outline" size="lg" className="text-lg px-8 py-4">
               Our Environmental Impact
             </Button>
           </div>
@@ -79,6 +74,5 @@ export function HeroSection() {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
